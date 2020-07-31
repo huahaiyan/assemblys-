@@ -1,7 +1,7 @@
 /*
  * @Author:华海燕
  * @Date: 2020-07-30 13:37:27
- * @LastEditTime: 2020-07-30 17:33:29
+ * @LastEditTime: 2020-07-31 10:59:33
  * @LastEditors: Please set LastEditors
  * @Description: 机器人弹层
  * @FilePath: \assemblys\packages\machinesShell\main\index.ts
@@ -14,8 +14,6 @@ export default class MachinesShellTs extends Vue {
     @Prop() public bnt1: number|undefined;
     // @ts-ignore
     @Prop() public pData: Machines|undefined;
-    @Prop() public pshow: boolean|undefined;
-    public show = true;
      // @ts-ignore
     public data: Machines = new Machines();
     public imgs = imgs;
@@ -23,7 +21,7 @@ export default class MachinesShellTs extends Vue {
         if ( this.pData) {
             this.data = this.pData;
         }
-        this.show = this.pshow ? this.pshow : true;
+        // this.show = this.pshow ? this.pshow : true;
         console.log('date', this.data);
     }
      @Watch('pData')
@@ -42,6 +40,6 @@ export default class MachinesShellTs extends Vue {
     public goCallback() {}
     // 关闭
     public close() {
-        this.show = false;
+        this.data.show = false;
     }
 }

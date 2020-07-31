@@ -1,74 +1,37 @@
 @import url('../../../common/config.less');
-.sMachinesShellBox{
-    color: #fff;
-    .contentBox{
-        width: 90%;
-        margin: 0 auto;
-    }
-.contentMsg{
-    position: relative;
-    margin-top: 10rem;
-    position: relative;
-    .imgBox{
-        width: 50%;
+.assemblysMachineTips{
+    position: fixed;
+    width: 20%;
+    right: 3%;
+    top: -70px;
+    z-index: 999;
+    .assemblys_tips_n{
         position: relative;
-        z-index: 2;
-        .Shell{
+        width: 100%;
+        img{
+            display: block;
             width: 100%;
         }
-        .leftMsg{
-            width: 100%;
+        .assemblys_msg{
             position: absolute;
-            top: 50%;
+            width: 100%;
+            border-radius: 3.2rem;
+            background: #ffffff;
+            border: 1px solid #999999;
             text-align: center;
             font-size: @fontSize2;
+            min-height: 3rem;
+            max-height: 6rem;
+            left: 0;
+            top: 89%;
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            .assemblys_msg_n{
+                width: 90%;
+                margin: 0 auto;
+            }
         }
     }
-    .tipsBox{
-        background: @textBg;
-        background-size: 100% 100%;
-        width: 54%;
-        position: absolute;
-        right: 0;
-        top: 5rem;
-        min-height: 5rem;
-        padding: 1rem .5rem;
-        border-radius: 1rem;
-        font-size: @fontSize2;
-    }
-}
-.bnts{
-    span{
-        background:@bntBg ;
-        border: 1px solid #7b91a1;
-        font-size: @fontSize2;
-        line-height: 2rem;
-        border-radius: 2rem;
-        display: block;
-    }
-}
-
-.bnt1{
-    span{
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-.bnt2{
-    span{ width: 45%};
-}
-.closeBnt{
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    background-size: 100%;
-    position: absolute;
-    color: #000;
-    font-size: @fontSize4;
-    text-align: center;
-    line-height: 50px;
-    top: 9rem;
-    right:.5rem;
-    border-radius: 100%;
-}
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-30 17:43:52
- * @LastEditTime: 2020-07-30 18:06:01
+ * @LastEditTime: 2020-07-31 09:39:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \assemblys\Vue.config.js
@@ -40,20 +40,3 @@ const path = require('path')
 //     ]
 //  // }
 // }
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
-        ]
-      }
-    ]
-  }
-}

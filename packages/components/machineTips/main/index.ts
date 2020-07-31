@@ -1,47 +1,34 @@
 /*
  * @Author:华海燕
  * @Date: 2020-07-30 13:37:27
- * @LastEditTime: 2020-07-31 08:42:09
+ * @LastEditTime: 2020-07-31 09:39:06
  * @LastEditors: Please set LastEditors
- * @Description: 机器人弹层
+ * @Description: 机器人提示
  * @FilePath: \assemblys\packages\machinesShell\main\index.ts
  */
 import { Component, Vue, Prop, Watch, Emit} from 'vue-property-decorator';
-import Machines from '../../../entity/machines';
-import imgs from '../../../assets/MachinesShell.gif';
+import imgs from '../../../assets/MachinesShell1.gif';
 @Component
 export default class MachineTipsTs extends Vue {
-    @Prop() public bnt1: number|undefined;
+    @Prop() public pMsg: string|undefined;
     // @ts-ignore
-    @Prop() public pData: Machines|undefined;
-    @Prop() public pshow: boolean|undefined;
-    public show = true;
+    public msg = '';
      // @ts-ignore
-    public data: Machines = new Machines();
     public imgs = imgs;
     public created() {
-        if ( this.pData) {
-            this.data = this.pData;
+        if ( this.pMsg) {
+            this.msg = this.pMsg;
         }
-        this.show = this.pshow ? this.pshow : true;
-        console.log('date', this.data);
     }
-     @Watch('pData')
+     @Watch('pMsg')
         // tslint:disable-next-line:no-trailing-whitespace
-     public onChangeValue( newVal: Machines, oldVal: Machines) {   
+     public onChangeValue( newVal: string, oldVal: string) {   
             if (newVal !== oldVal) {
                 // @ts-ignore
-                this.data = this.pData;
+                this.pMsg = this.pMsg;
             }
     }
     @Emit('selectCallback')
     // tslint:disable-next-line:no-empty
     public selectCallback() {}
-    @Emit('goCallback')
-    // tslint:disable-next-line:no-empty
-    public goCallback() {}
-    // 关闭
-    public close() {
-        this.show = false;
-    }
 }

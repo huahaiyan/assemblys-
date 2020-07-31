@@ -1,16 +1,17 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-30 11:58:15
- * @LastEditTime: 2020-07-30 16:11:07
+ * @LastEditTime: 2020-07-31 13:59:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \assemblys\src\App.vue
 --> 
 <template>
   <div id="app">
+    <MachineTipsView />
     <MachinesShellView :pData='date' @goCallback='go2' @selectCallback='go'></MachinesShellView>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">测试首页5</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -23,6 +24,7 @@ export default class AppVue extends Vue {
   public date = {
     bntNumber: 2,
     msgContent: '我只是测试数据',
+    show:true
   };
   public go(){
     alert('goerie');

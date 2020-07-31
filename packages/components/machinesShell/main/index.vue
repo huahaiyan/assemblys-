@@ -1,21 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-30 13:37:39
- * @LastEditTime: 2020-07-30 17:34:02
+ * @LastEditTime: 2020-07-31 10:59:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \assemblys\packages\machinesShell\main\index.vue
 --> 
 <template>
-    <div class="assemblysMachinesShell">
-        <div :class="show?'assemblysLayer sMachinesShellBox':'hide'">
+    <div class="assemblyspage assemblysMachinesShell">
+        <div :class="data.show?'assemblysLayer sMachinesShellBox':'hide'">
             <div class="contentBox">
                 <div class="contentMsg">
                     <div class="imgBox">
                          <img class="Shell" :src="imgs"/>
-                         <p class="leftMsg">
+                         <!-- <p class="leftMsg">
                              测试
-                         </p>
+                         </p> -->
                     </div>
                     <div class="tipsBox">
                         {{data.msgContent}}

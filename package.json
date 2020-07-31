@@ -1,6 +1,6 @@
 {
   "name": "hhy-assemblys",
-  "version": "0.1.4",
+  "version": "0.1.10",
   "main":"lib/assemblys-hhy.umd.js",
   "private": false,
   "license":"MIT",
